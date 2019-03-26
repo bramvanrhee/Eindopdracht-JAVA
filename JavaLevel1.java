@@ -60,8 +60,15 @@ public class JavaLevel1 {
 		stDeviatie = Math.sqrt(standaardDeviatie/length);
 		
 		//afdrukken
+		for (int col = 0; col < columnCount; col++) {
+			System.out.print("\t"+col); //Print het aantal columns
+		}
+		
+		System.out.println("\tGemid.");
+		
 		System.out.println();
 		for (int row = 0; row < rowCount; row++) {
+			System.out.print(row); //Print het aantal rijen
 			for(int col = 0; col < columnCount; col++) {
 				System.out.print("\t"+getallen[row][col]); //Print de random getalen
 			}
@@ -69,6 +76,7 @@ public class JavaLevel1 {
 		}
 		
 		System.out.println();
+		System.out.print("Min");
 		for (int row = 0; row < rowCount; row++) {
 			System.out.print("\t"+minimum[row]); //Print het minimum
 		}
@@ -76,6 +84,7 @@ public class JavaLevel1 {
 		System.out.print("\t"+gemiddeldeG); //Print het gemiddelde van het gemiddelde
 		
 		System.out.println();
+		System.out.print("Max");
 		for (int row = 0; row < rowCount; row++) {
 			System.out.print("\t"+maximum[row]); //Print het maximum
 		}
