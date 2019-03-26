@@ -16,7 +16,23 @@ public class JavaLevel1 {
 			}
 			gemiddelde[row] = som/rowCount;
 			
-			
+		}
+		//Berekenen Minimum en Maximum
+		int [] minimum = new int[columnCount];
+		for (int col = 0; col < columnCount; col++) {
+			minimum[col] = 100;
+		}
+		
+		int [] maximum = new int[columnCount];
+		for (int col= 0; col < columnCount; col++) {
+			maximum[col] = 0; 
+		}
+		
+		for (int col = 0; col < columnCount; col++) {
+			for (int row = 0; row < rowCount; row++) {
+				minimum[col] = Math.min(getallen[row][col], minimum[col]);
+				maximum[col] = Math.max(getallen[row][col], maximum[col]);
+			}
 		}
 	}
 
