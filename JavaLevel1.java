@@ -7,6 +7,7 @@ public class JavaLevel1 {
 		int [][] getallen = new int[rowCount][columnCount];
 		int[] gemiddelde = new int[rowCount]; 
 		int gemiddeldeG = 0;
+		double stDeviatie;
 		
 		//Generen random getallen en rekent het gemiddelde uit
 		for (int row = 0; row < rowCount; row++) {
@@ -42,6 +43,21 @@ public class JavaLevel1 {
 			sum = sum + gemiddelde[row];
 			gemiddeldeG = sum/rowCount;
 		}
+		
+		double sum2 = 0.0, standaardDeviatie = 0.0;
+		int length = gemiddelde.length;
+		
+		for (double num : gemiddelde) {
+			sum2 += num;
+		}
+		
+		double avg = sum2/length;
+		
+		for (double num : gemiddelde) {
+			standaardDeviatie += Math.pow(num - avg, 2);
+		}
+		
+		stDeviatie = Math.sqrt(standaardDeviatie/length);
 	}
 
 }
