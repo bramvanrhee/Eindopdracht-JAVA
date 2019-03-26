@@ -58,6 +58,16 @@ public class JavaLevel1 {
 		}
 		
 		stDeviatie = Math.sqrt(standaardDeviatie/length);
+		
+		//afdrukken
+		System.out.println();
+		for (int row = 0; row < rowCount; row++) {
+			for(int col = 0; col < columnCount; col++) {
+				System.out.print("\t"+getallen[row][col]); //Print de random getalen
+			}
+			System.out.println("\t"+gemiddelde[row]); //Print het gemiddelde
+		}
+
 	}
 
 }
