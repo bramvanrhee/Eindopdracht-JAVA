@@ -73,6 +73,8 @@ public class JavaLevel1 {
 			System.out.print("\t"+minimum[row]); //Print het minimum
 		}
 		
+		System.out.print("\t"+gemiddeldeG); //Print het gemiddelde van het gemiddelde
+		
 		System.out.println();
 		for (int row = 0; row < rowCount; row++) {
 			System.out.print("\t"+maximum[row]); //Print het maximum
