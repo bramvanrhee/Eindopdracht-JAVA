@@ -79,6 +79,8 @@ public class JavaLevel1 {
 		for (int row = 0; row < rowCount; row++) {
 			System.out.print("\t"+maximum[row]); //Print het maximum
 		}
+		
+		System.out.println("\t"+String.format("%.3f", stDeviatie)); //Print de Standaard Deviatie
 	}
 
 }
