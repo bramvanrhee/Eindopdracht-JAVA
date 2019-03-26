@@ -6,6 +6,7 @@ public class JavaLevel1 {
 		int columnCount = Integer.parseInt(args[1]); //Hierdoor kun je invullen hoeveel columns er op je scherm verschijnen
 		int [][] getallen = new int[rowCount][columnCount];
 		int[] gemiddelde = new int[rowCount]; 
+		int gemiddeldeG = 0;
 		
 		//Generen random getallen en rekent het gemiddelde uit
 		for (int row = 0; row < rowCount; row++) {
@@ -33,6 +34,13 @@ public class JavaLevel1 {
 				minimum[col] = Math.min(getallen[row][col], minimum[col]);
 				maximum[col] = Math.max(getallen[row][col], maximum[col]);
 			}
+		}
+		
+		//Berekent Gemiddelde van het Gemiddelde
+		int sum = 0;
+		for (int row = 0; row < rowCount; row++) {
+			sum = sum + gemiddelde[row];
+			gemiddeldeG = sum/rowCount;
 		}
 	}
 
